@@ -1,15 +1,14 @@
+import java.util.ArrayList;
+
 public class Database {
 
-private Superhero[] superheroes = new Superhero[5];
+private ArrayList<Superhero> name = new ArrayList<>();
 
-public Database() {
-    Superhero superhero0 = new Superhero();
-    Superhero superhero1 = new Superhero();
-    Superhero superhero2 = new Superhero();
-    Superhero superhero3 = new Superhero();
-    Superhero superhero4 = new Superhero();
+public  void addSuperheroes(String name, boolean isHuman, String superPower, int creationYear, double strength) {
+    Superhero superhero = new Superhero(name, isHuman, superPower, creationYear, strength);
+//database[count] = superhero;
+//count++;
 
-
+    }
 }
 
-}

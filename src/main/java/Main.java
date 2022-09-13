@@ -4,31 +4,46 @@ public class Main {
 
     public static void main(String[] args) {
 
-        System.out.println("Name:");
-        Scanner sc0 = new Scanner(System.in);
-        String name = sc0.nextLine();
+        Scanner sc = new Scanner(System.in); // brugerens input.
+        Database superHeroDatabase = new Database();
 
-        System.out.println("Human?:");
-        Scanner sc1 = new Scanner(System.in);
-        String isHumanString = sc1.nextLine();
-        boolean isHuman = (isHumanString == "y");
+        int brugerValg = 0;
 
+        do {
+            System.out.println("""
+                    Velkommen til Superhero Collector.
+                    1. Opret superhelt.
+                    9. Afslut.
+                    """);
 
-        System.out.println("Superpower:");
-        Scanner sc2 = new Scanner(System.in);
-        String superPower = sc2.nextLine();
+            brugerValg = sc.nextInt();
+            sc.nextLine();
+            if (brugerValg == 1) {
+                System.out.println("Superheros name?");
+                String name = sc.nextLine();
+                System.out.println("Is superhero human?");
+                String isHumanString = sc.next();
+                boolean isHuman = false;
+                if (isHumanString.equalsIgnoreCase("j")) {
+                    isHuman = true;
+                }
+                sc.nextLine();
+                System.out.println("Superheros power");
+                String superPower = sc.nextLine();
+                System.out.println("Superheros creation year");
+                int creationYear = sc.nextInt();
+                System.out.println("Superhoeros strength");
+                double strength = sc.nextDouble();
 
-        System.out.println("Year of creation:");
-        Scanner sc3 = new Scanner(System.in);
-        int creationYear = sc3.nextInt();
+                superHeroDatabase.addSuperheroes(name, isHuman, superPower, creationYear, strength);
+            } else {
+                System.exit(0);
+            }
+        }
 
-        System.out.println("Strength:");
-        Scanner sc4 = new Scanner(System.in);
-        double strength = sc4.nextDouble();
+            while (brugerValg != 9) ;
 
-        System.out.println();
-
-        Superhero hero1 = new Superhero(name, isHuman, superPower, creationYear, strength);
+        }
     }
 
-}
+
