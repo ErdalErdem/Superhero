@@ -16,7 +16,7 @@ public class Main {
 
         System.out.println("Superpower:");
         Scanner sc2 = new Scanner(System.in);
-       String superPower = sc2.nextLine();
+        String superPower = sc2.nextLine();
 
         System.out.println("Year of creation:");
         Scanner sc3 = new Scanner(System.in);
@@ -29,6 +29,6 @@ public class Main {
         System.out.println();
 
         Superhero hero1 = new Superhero(name, isHuman, superPower, creationYear, strength);
-
     }
+
 }
