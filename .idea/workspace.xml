@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4c129410-604a-45c7-8ab5-2c998a9bafb8" name="Changes" comment="User story 3">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Userinterface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Database.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
@@ -53,7 +54,7 @@
       <workItem from="1662971979524" duration="9890000" />
       <workItem from="1663070396864" duration="2315000" />
       <workItem from="1663073124398" duration="103000" />
-      <workItem from="1663073260575" duration="7004000" />
+      <workItem from="1663073260575" duration="20193000" />
     </task>
     <task id="LOCAL-00001" summary="Database indført">
       <created>1662988153364</created>
@@ -76,7 +77,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663073827282</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="User story 3">
+      <created>1663147092149</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1663147092149</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
