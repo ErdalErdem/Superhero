@@ -33,4 +33,5 @@ public class Superhero {
     public double getStrengh() {
         return strength;
     }
+
 }
