@@ -28,6 +28,8 @@ public class Userinterface {
         }
     }
 
+    // brugers muligheder af valg
+
     public void UserChoice(int userChoice) {
         if (userChoice == 1)
             addSuperhero(); //Crud operation
@@ -38,6 +40,8 @@ public class Userinterface {
         else if (userChoice == 4)
             editSuperhero();
     }
+
+    // tilføje superhelte
 
     public void addSuperhero() {
         System.out.println("Enter the superhero's real name: ");
@@ -56,6 +60,7 @@ public class Userinterface {
         db.addSuperheroes(name, true, power, year, strength);
     }
 
+    // fremvisning af superhetle liste
     public void superheroList() {
 
         if (db.getHeroDatabase().size() == 0) {
@@ -68,6 +73,8 @@ public class Userinterface {
         }
     }
 
+    // søgning af superhelte.
+
     public void searchInput() {
         System.out.println("Enter Superhero name: ");
         String findHero = scanner.nextLine();
@@ -78,6 +85,8 @@ public class Userinterface {
             System.out.println("Found nothing with this name.");
         }
     }
+
+    // Så bruger kan redigere på fremtidige superhelte.
 
     public void editSuperhero() {
 
@@ -104,7 +113,7 @@ public class Userinterface {
     private void editSuperhero(int editUserChoice) {
         if (editUserChoice == 1)
             editTool();
-        else if (editUserChoice !=9) {
+        else if (editUserChoice != 9) {
             System.out.println("""
                     Please try again, choose between 1 or 9.""");
         }
@@ -131,7 +140,7 @@ public class Userinterface {
                 System.out.println("Invalid data, try again");
             } else {
                 editHero = db.getHeroDatabase().get(numb - 1);
-                System.out.println("Edit superhero" + editHero.getName() + " " + editHero.getSuperPower()+ " " + editHero.getCreationYear()+ " " + editHero.getStrength());
+                System.out.println("Edit superhero" + editHero.getName() + " " + editHero.getSuperPower() + " " + editHero.getCreationYear() + " " + editHero.getStrength());
 
                 System.out.println("Edit superhero and press ENTER" + "If no need for editing press ENTER");
 
@@ -166,25 +175,27 @@ public class Userinterface {
         }
     }
 
-        public int readIntger () {
-            while (!scanner.hasNextInt()) {
-                String text = scanner.next();
-                System.out.println(text + " " + "Invalid data, input a number please.");
-            }
-            int result = scanner.nextInt();
-            return result;
-        }
+    // Bruger velighed: Kode der forhindre bruger at lave ERRORS.
 
-
-        public int readDouble () {
-            while (!scanner.hasNextDouble()) {
-                String text = scanner.next();
-                System.out.println(text + " " + "Ugyldig data, indtast et tal.");
-            }
-            int result = scanner.nextInt();
-            return result;
+    public int readIntger() {
+        while (!scanner.hasNextInt()) {
+            String text = scanner.next();
+            System.out.println(text + " " + "Invalid data, input a number please.");
         }
+        int result = scanner.nextInt();
+        return result;
     }
+
+
+    public int readDouble() {
+        while (!scanner.hasNextDouble()) {
+            String text = scanner.next();
+            System.out.println(text + " " + "Ugyldig data, indtast et tal.");
+        }
+        int result = scanner.nextInt();
+        return result;
+    }
+}
 
 
 
