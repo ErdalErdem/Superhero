@@ -58,9 +58,15 @@ public class Database {
             return heroDatabase;
         }
 
-        public void addToDatabse (String name,boolean isHuman, String superPower,int creationYear, double strength){
+        public void addToDatabse (String name,boolean isHuman, String superPower,int creationYear, double strength) {
             heroDatabase.add(new Superhero(name, isHuman, superPower, creationYear, strength));
+        }
 
+    public ArrayList<Superhero> editSuperhero () {
+        return heroDatabase;
+    }
+            public void editSuperhero (String name,boolean isHuman, String superPower,int creationYear, double strength){
+        Superhero editSuperhero = new Superhero(name,isHuman, superPower, creationYear, strength);
 
         }
     }

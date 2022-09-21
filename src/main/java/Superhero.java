@@ -19,18 +19,32 @@ public class Superhero {
             return name;
             }
 
+            public String setName() {
+        return name;
+            }
+
             public boolean getisHuman() {
         return isHuman;
             }
             public String getSuperPower() {
         return superPower;
             }
+            public String setSuperPower() {
+        return superPower;
+            }
 
     public int getCreationYear() {
         return creationYear;
     }
+    public int setCreationYear() {
+        return creationYear;
 
-    public double getStrengh() {
+    }
+
+    public double getStrength() {
+        return strength;
+    }
+    public double setStrength() {
         return strength;
     }
 
