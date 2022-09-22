@@ -69,7 +69,17 @@ public class Database {
         Superhero editSuperhero = new Superhero(name,isHuman, superPower, creationYear, strength);
 
         }
+    public void deleteHero(int heroToDelete){
+
+        int deleteOnIndex = heroToDelete - 1;
+
+        System.out.println(heroDatabase.get(deleteOnIndex).getName() + " has been deleted");
+
+        heroDatabase.remove(deleteOnIndex);
     }
+
+}
+
 
 
 

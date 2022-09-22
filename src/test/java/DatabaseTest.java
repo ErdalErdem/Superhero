@@ -52,5 +52,11 @@ class DatabaseTest {
         //Assert result
         assertEquals(result.getName(), name);
     }
+    public Superhero findSuperhero2(String name) {
+        // test sub
+        // TODO lave en tester
+        return new Superhero(name, false, "", 0, 0.0);
+
+    }
 }
 

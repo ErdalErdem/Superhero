@@ -18,6 +18,7 @@ public class Userinterface {
                     2. Superhero List
                     3. Search Superhero
                     4. Edit Superhero
+                    5. Delete hero
                     9. End Program
                     """);
 
@@ -39,6 +40,8 @@ public class Userinterface {
             searchInput();
         else if (userChoice == 4)
             editSuperhero();
+        else if (userChoice == 5)
+            deleteHero();
     }
 
     // tilføje superhelte
@@ -190,12 +193,44 @@ public class Userinterface {
     public int readDouble() {
         while (!scanner.hasNextDouble()) {
             String text = scanner.next();
-            System.out.println(text + " " + "Ugyldig data, indtast et tal.");
+            System.out.println(text + " " + "Invalid data, input a number please.");
         }
         int result = scanner.nextInt();
         return result;
     }
+
+    private void deleteHero() {
+        //If løkken sender en besked hvis listen er tom
+        if (db.getHeroDatabase().isEmpty()) {
+            System.out.println("No heroes found in our database");
+        } else {
+            //Printer alle helte ud med deres plads nummer
+            System.out.println("Choose hero you want to delete: \n");
+            for (Superhero hero : db.getHeroDatabase()) {
+                System.out.println(db.getHeroDatabase().indexOf(hero) + 1 + ". " + hero.getName());
+            }
+
+            //Modtager bruger input for hvem der skal slettes og en advarsel.
+            int v1 = readIntger();
+            System.out.println("Are you sure, you want delete this superhero? " + db.getHeroDatabase().get(v1 - 1).getName() + "?\n1. Delete " + db.getHeroDatabase().get(v1 - 1).getName() + "\n2. Dont delete");
+
+            int v2 = readIntger();
+            switch (v2) {
+                case 1:
+                    db.deleteHero(v1);
+                case 2:
+                    System.out.println("Going back");
+                    break;
+                default:
+                    System.out.println("Input is not valid");
+                    break;
+
+
+            }
+        }
+    }
 }
+
 
 
 
