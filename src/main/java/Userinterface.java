@@ -47,7 +47,7 @@ public class Userinterface {
     // tilføje superhelte
 
     public void addSuperhero() {
-        System.out.println("Enter the superhero's real name: ");
+        System.out.println("Enter the superhero's real name:");
         String name = scanner.nextLine();
 
         System.out.println("Enter the superhero's power: ");
@@ -57,7 +57,7 @@ public class Userinterface {
         // int year = scanner.nextInt();
         int year = readIntger();
 
-        System.out.println("Enter the superhero's strength: ");
+        System.out.println("Enter the superhero's strength:");
         // double strength = scanner.nextDouble();
         double strength = readDouble();
         db.addSuperheroes(name, true, power, year, strength);
@@ -67,7 +67,7 @@ public class Userinterface {
     public void superheroList() {
 
         if (db.getHeroDatabase().size() == 0) {
-            System.out.println("There's no Superhero registered...\n");
+            System.out.println("There's no Superhero registered...\n" + ConsoleColors.RED);
         } else {
             System.out.println("List of Superhero's registered\n");
             for (Superhero superhero : db.getHeroDatabase()) {
@@ -85,7 +85,7 @@ public class Userinterface {
         if (superhero != null) {
             System.out.println("Information" + "\n Name:" + " " + superhero.getName() + " " + "Human:" + " " + superhero.getisHuman() + " " + "Superpower" + " " + superhero.getSuperPower() + " " + "Year of creation" + " " + superhero.getCreationYear() + " " + "Strength" + " " + superhero.getStrength());
         } else {
-            System.out.println("Found nothing with this name.");
+            System.out.println("Found nothing with this name."+ ConsoleColors.RED);
         }
     }
 
@@ -117,15 +117,14 @@ public class Userinterface {
         if (editUserChoice == 1)
             editTool();
         else if (editUserChoice != 9) {
-            System.out.println("""
-                    Please try again, choose between 1 or 9.""");
+            System.out.println("Please try again, choose between 1 or 9." + ConsoleColors.RED);
         }
     }
 
     public void editTool() {
 
         if (db.getHeroDatabase().size() == 0) {
-            System.out.println("There's no Superhero registered");
+            System.out.println("There's no Superhero registered"+ ConsoleColors.RED);
         } else {
             System.out.println("List of Superhero's registered");
 
@@ -140,7 +139,7 @@ public class Userinterface {
             scanner.nextLine();
 
             if (numb - 1 >= db.getHeroDatabase().size()) {
-                System.out.println("Invalid data, try again");
+                System.out.println("Invalid data, try again"+ ConsoleColors.RED);
             } else {
                 editHero = db.getHeroDatabase().get(numb - 1);
                 System.out.println("Edit superhero" + editHero.getName() + " " + editHero.getSuperPower() + " " + editHero.getCreationYear() + " " + editHero.getStrength());
@@ -183,7 +182,7 @@ public class Userinterface {
     public int readIntger() {
         while (!scanner.hasNextInt()) {
             String text = scanner.next();
-            System.out.println(text + " " + "Invalid data, input a number please.");
+            System.out.println(text + " " + "Invalid data, input a number please."+ ConsoleColors.RED);
         }
         int result = scanner.nextInt();
         return result;
@@ -193,24 +192,24 @@ public class Userinterface {
     public int readDouble() {
         while (!scanner.hasNextDouble()) {
             String text = scanner.next();
-            System.out.println(text + " " + "Invalid data, input a number please.");
+            System.out.println(text + " " + "Invalid data, input a number please."+ ConsoleColors.RED);
         }
         int result = scanner.nextInt();
         return result;
     }
 
     private void deleteHero() {
-        //If løkken sender en besked hvis listen er tom
+
         if (db.getHeroDatabase().isEmpty()) {
-            System.out.println("No heroes found in our database");
+            System.out.println("No heroes found in our database"+ ConsoleColors.RED);
         } else {
-            //Printer alle helte ud med deres plads nummer
+
             System.out.println("Choose hero you want to delete: \n");
             for (Superhero hero : db.getHeroDatabase()) {
                 System.out.println(db.getHeroDatabase().indexOf(hero) + 1 + ". " + hero.getName());
             }
 
-            //Modtager bruger input for hvem der skal slettes og en advarsel.
+
             int v1 = readIntger();
             System.out.println("Are you sure, you want delete this superhero? " + db.getHeroDatabase().get(v1 - 1).getName() + "?\n1. Delete " + db.getHeroDatabase().get(v1 - 1).getName() + "\n2. Dont delete");
 
@@ -222,7 +221,7 @@ public class Userinterface {
                     System.out.println("Going back");
                     break;
                 default:
-                    System.out.println("Input is not valid");
+                    System.out.println("Input is not valid"+ ConsoleColors.RED);
                     break;
 
 
