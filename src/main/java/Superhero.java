@@ -14,9 +14,6 @@ public class Superhero {
         this.strength = strength;
     }
 
-    public Superhero() {
-    }
-
     public String getName() {
         return name;
     }
