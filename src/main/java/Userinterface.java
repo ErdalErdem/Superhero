@@ -198,6 +198,9 @@ public class Userinterface {
         return result;
     }
 
+
+    // for at slette superheroes
+
     private void deleteHero() {
 
         if (db.getHeroDatabase().isEmpty()) {
