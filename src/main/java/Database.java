@@ -24,10 +24,12 @@ public class Database {
         heroDatabase.add(new Superhero(name, isHuman, superPower, creationYear, strength));
 
     }
-
+/*
     public ArrayList<Superhero> takeSuperheroes() {
         return heroDatabase;
     }
+
+ */
 
     public Superhero findSuperhero(String name) {
         for (Superhero p : heroDatabase) {
