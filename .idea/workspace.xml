@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4c129410-604a-45c7-8ab5-2c998a9bafb8" name="Changes" comment="Superhero del 7">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ConsoleColors.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Userinterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Userinterface.java" afterDir="false" />
     </list>
@@ -42,7 +41,9 @@
     "WebServerToolWindowFactoryState": "false",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "last_opened_file_path": "C:/Users/MC401/IdeaProjects/Superhero"
+    "last_opened_file_path": "C:/Users/MC401/IdeaProjects/Superhero",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "Errors"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -70,7 +71,8 @@
       <workItem from="1663677000736" duration="9923000" />
       <workItem from="1663747470868" duration="25000" />
       <workItem from="1663747517760" duration="18000" />
-      <workItem from="1663747567145" duration="7160000" />
+      <workItem from="1663747567145" duration="8263000" />
+      <workItem from="1663914917127" duration="2147000" />
     </task>
     <task id="LOCAL-00001" summary="Database indført">
       <created>1662988153364</created>
@@ -128,7 +130,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663842946208</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Superhero del 7">
+      <created>1663845768277</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1663845768277</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

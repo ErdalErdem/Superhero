@@ -144,11 +144,11 @@ public class Userinterface {
                 editHero = db.getHeroDatabase().get(numb - 1);
                 System.out.println("Edit superhero" + editHero.getName() + " " + editHero.getSuperPower() + " " + editHero.getCreationYear() + " " + editHero.getStrength());
 
-                System.out.println("Edit superhero and press ENTER" + "If no need for editing press ENTER");
+                System.out.println("Edit superhero and press enter" + " " + "If no need for editing press enter");
 
 
                 System.out.println("Current name: " + editHero.getName());
-                System.out.println("Please enter the new NAME below");
+                System.out.println("Please enter the new name below");
                 String newName = scanner.nextLine();
                 if (!newName.isEmpty()) {
                     editHero.setName();
@@ -210,13 +210,13 @@ public class Userinterface {
             }
 
 
-            int v1 = readIntger();
-            System.out.println("Are you sure, you want delete this superhero? " + db.getHeroDatabase().get(v1 - 1).getName() + "?\n1. Delete " + db.getHeroDatabase().get(v1 - 1).getName() + "\n2. Dont delete");
+            int RI = readIntger();
+            System.out.println("Are you sure, you want delete this superhero? " + db.getHeroDatabase().get(RI - 1).getName() + "?\n1. Delete " + db.getHeroDatabase().get(RI - 1).getName() + "\n2. Dont delete");
 
             int v2 = readIntger();
             switch (v2) {
                 case 1:
-                    db.deleteHero(v1);
+                    db.deleteHero(RI);
                 case 2:
                     System.out.println("Going back");
                     break;
