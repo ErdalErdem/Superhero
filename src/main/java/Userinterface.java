@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Userinterface {
 
-    private Database db = new Database();
+    private Controller controller = new Controller();
 
     Scanner scanner = new Scanner(System.in);
 
@@ -50,6 +50,9 @@ public class Userinterface {
         System.out.println("Enter the superhero's real name:");
         String name = scanner.nextLine();
 
+       /* System.out.println("Is your superhero human?");
+        boolean isHuman = */
+
         System.out.println("Enter the superhero's power: ");
         String power = scanner.nextLine();
 
@@ -60,17 +63,17 @@ public class Userinterface {
         System.out.println("Enter the superhero's strength:");
         // double strength = scanner.nextDouble();
         double strength = readDouble();
-        db.addSuperheroes(name, true, power, year, strength);
+        controller.database.addSuperheroes(name, true, power, year, strength);
     }
 
     // fremvisning af superhetle liste
     public void superheroList() {
 
-        if (db.getHeroDatabase().size() == 0) {
+        if (controller.database.getHeroDatabase().size() == 0) {
             System.out.println("There's no Superhero registered...\n" + ConsoleColors.RED);
         } else {
             System.out.println("List of Superhero's registered\n");
-            for (Superhero superhero : db.getHeroDatabase()) {
+            for (Superhero superhero : controller.database.getHeroDatabase()) {
                 System.out.println("Name:" + " " + superhero.getName() + " " + "Human:" + " " + superhero.getisHuman() + " " + "Superpower:" + " " + superhero.getSuperPower() + " " + "Year of creation" + " " + superhero.getCreationYear() + " " + "Strength" + " " + superhero.getStrength());
             }
         }
@@ -81,7 +84,7 @@ public class Userinterface {
     public void searchInput() {
         System.out.println("Enter Superhero name: ");
         String findHero = scanner.nextLine();
-        Superhero superhero = db.findSuperhero(findHero);
+        Superhero superhero = controller.database.findSuperhero(findHero);
         if (superhero != null) {
             System.out.println("Information" + "\n Name:" + " " + superhero.getName() + " " + "Human:" + " " + superhero.getisHuman() + " " + "Superpower" + " " + superhero.getSuperPower() + " " + "Year of creation" + " " + superhero.getCreationYear() + " " + "Strength" + " " + superhero.getStrength());
         } else {
@@ -123,13 +126,13 @@ public class Userinterface {
 
     public void editTool() {
 
-        if (db.getHeroDatabase().size() == 0) {
+        if (controller.database.getHeroDatabase().size() == 0) {
             System.out.println("There's no Superhero registered"+ ConsoleColors.RED);
         } else {
             System.out.println("List of Superhero's registered");
 
-            for (int i = 0; i < db.getHeroDatabase().size(); i++) {
-                System.out.println(i + 1 + " Superhero: \n" + db.getHeroDatabase().get(i));
+            for (int i = 0; i < controller.database.getHeroDatabase().size(); i++) {
+                System.out.println(i + 1 + " Superhero: \n" + controller.database.getHeroDatabase().get(i));
             }
 
 
@@ -138,10 +141,10 @@ public class Userinterface {
             Superhero editHero;
             scanner.nextLine();
 
-            if (numb - 1 >= db.getHeroDatabase().size()) {
+            if (numb - 1 >= controller.database.getHeroDatabase().size()) {
                 System.out.println("Invalid data, try again"+ ConsoleColors.RED);
             } else {
-                editHero = db.getHeroDatabase().get(numb - 1);
+                editHero = controller.database.getHeroDatabase().get(numb - 1);
                 System.out.println("Edit superhero" + editHero.getName() + " " + editHero.getSuperPower() + " " + editHero.getCreationYear() + " " + editHero.getStrength());
 
                 System.out.println("Edit superhero and press enter" + " " + "If no need for editing press enter");
@@ -203,23 +206,23 @@ public class Userinterface {
 
     private void deleteHero() {
 
-        if (db.getHeroDatabase().isEmpty()) {
+        if (controller.database.getHeroDatabase().isEmpty()) {
             System.out.println("No heroes found in our database"+ ConsoleColors.RED);
         } else {
 
             System.out.println("Choose hero you want to delete: \n");
-            for (Superhero hero : db.getHeroDatabase()) {
-                System.out.println(db.getHeroDatabase().indexOf(hero) + 1 + ". " + hero.getName());
+            for (Superhero hero :controller.database.getHeroDatabase()) {
+                System.out.println(controller.database.getHeroDatabase().indexOf(hero) + 1 + ". " + hero.getName());
             }
 
 
             int RI = readIntger();
-            System.out.println("Are you sure, you want delete this superhero? " + db.getHeroDatabase().get(RI - 1).getName() + "?\n1. Delete " + db.getHeroDatabase().get(RI - 1).getName() + "\n2. Dont delete");
+            System.out.println("Are you sure, you want delete this superhero? " + controller.database.getHeroDatabase().get(RI - 1).getName() + "?\n1. Delete " + controller.database.getHeroDatabase().get(RI - 1).getName() + "\n2. Dont delete");
 
             int v2 = readIntger();
             switch (v2) {
                 case 1:
-                    db.deleteHero(RI);
+                    controller.database.deleteHero(RI);
                 case 2:
                     System.out.println("Going back");
                     break;
