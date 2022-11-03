@@ -1,8 +1,14 @@
+package UI;
+
 import java.util.Scanner;
+import Controller.Controller;
+import Superhero.Superhero;
+import
 
 public class Userinterface {
 
     private Controller controller = new Controller();
+
 
     Scanner scanner = new Scanner(System.in);
 
@@ -14,10 +20,10 @@ public class Userinterface {
 
         while (userChoice != 9) {
             System.out.println("""                  
-                    1. Add Superhero
-                    2. Superhero List
-                    3. Search Superhero
-                    4. Edit Superhero
+                    1. Add Superhero.Superhero
+                    2. Superhero.Superhero List
+                    3. Search Superhero.Superhero
+                    4. Edit Superhero.Superhero
                     5. Delete hero
                     9. End Program
                     """);
@@ -70,9 +76,9 @@ public class Userinterface {
     public void superheroList() {
 
         if (controller.database.getHeroDatabase().size() == 0) {
-            System.out.println("There's no Superhero registered...\n" + ConsoleColors.RED);
+            System.out.println("There's no Superhero.Superhero registered...\n" + ConsoleColors.RED);
         } else {
-            System.out.println("List of Superhero's registered\n");
+            System.out.println("List of Superhero.Superhero's registered\n");
             for (Superhero superhero : controller.database.getHeroDatabase()) {
                 System.out.println("Name:" + " " + superhero.getName() + " " + "Human:" + " " + superhero.getisHuman() + " " + "Superpower:" + " " + superhero.getSuperPower() + " " + "Year of creation" + " " + superhero.getCreationYear() + " " + "Strength" + " " + superhero.getStrength());
             }
@@ -82,7 +88,7 @@ public class Userinterface {
     // søgning af superhelte.
 
     public void searchInput() {
-        System.out.println("Enter Superhero name: ");
+        System.out.println("Enter Superhero.Superhero name: ");
         String findHero = scanner.nextLine();
         Superhero superhero = controller.database.findSuperhero(findHero);
         if (superhero != null) {
@@ -127,12 +133,12 @@ public class Userinterface {
     public void editTool() {
 
         if (controller.database.getHeroDatabase().size() == 0) {
-            System.out.println("There's no Superhero registered"+ ConsoleColors.RED);
+            System.out.println("There's no Superhero.Superhero registered"+ ConsoleColors.RED);
         } else {
-            System.out.println("List of Superhero's registered");
+            System.out.println("List of Superhero.Superhero's registered");
 
             for (int i = 0; i < controller.database.getHeroDatabase().size(); i++) {
-                System.out.println(i + 1 + " Superhero: \n" + controller.database.getHeroDatabase().get(i));
+                System.out.println(i + 1 + " Superhero.Superhero: \n" + controller.database.getHeroDatabase().get(i));
             }
 
 

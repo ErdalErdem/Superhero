@@ -1,6 +1,9 @@
+package UI;
+
+import Superhero.Superhero;
+
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
 
 public class Database {
     private ArrayList<Superhero> heroDatabase;
@@ -25,7 +28,7 @@ public class Database {
 
     }
 /*
-    public ArrayList<Superhero> takeSuperheroes() {
+    public ArrayList<Superhero.Superhero> takeSuperheroes() {
         return heroDatabase;
     }
 

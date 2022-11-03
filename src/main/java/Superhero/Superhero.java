@@ -1,3 +1,5 @@
+package Superhero;
+
 public class Superhero {
 
     private String name;
