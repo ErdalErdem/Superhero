@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4c129410-604a-45c7-8ab5-2c998a9bafb8" name="Changes" comment="Package for consoleColors">
-      <change beforePath="$PROJECT_DIR$/src/main/java/Colors/ConsoleColors.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/UI/Userinterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UI/Userinterface.java" afterDir="false" />
-    </list>
+    <list default="true" id="4c129410-604a-45c7-8ab5-2c998a9bafb8" name="Changes" comment="jnd" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -228,7 +225,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667477410304</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="jnd">
+      <created>1667477657621</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1667477657621</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -254,6 +258,7 @@
     <MESSAGE value="Superhero del 6" />
     <MESSAGE value="Superhero del 7" />
     <MESSAGE value="Package for consoleColors" />
-    <option name="LAST_COMMIT_MESSAGE" value="Package for consoleColors" />
+    <MESSAGE value="jnd" />
+    <option name="LAST_COMMIT_MESSAGE" value="jnd" />
   </component>
 </project>
