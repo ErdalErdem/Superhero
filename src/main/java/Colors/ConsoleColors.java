@@ -1,3 +1,5 @@
+package Colors;
+
 public class ConsoleColors {
 
     // Reset
