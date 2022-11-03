@@ -3,7 +3,7 @@ package UI;
 import java.util.Scanner;
 import Controller.Controller;
 import Superhero.Superhero;
-import Colors.ConsoleColors;
+
 public class Userinterface {
     private Controller controller = new Controller();
 
@@ -74,7 +74,7 @@ public class Userinterface {
     public void superheroList() {
 
         if (controller.database.getHeroDatabase().size() == 0) {
-            System.out.println("There's no Superhero.Superhero registered...\n" + ConsoleColors.RED);
+            System.out.println("There's no Superhero.Superhero registered...\n");
         } else {
             System.out.println("List of Superhero.Superhero's registered\n");
             for (Superhero superhero : controller.database.getHeroDatabase()) {
@@ -92,7 +92,7 @@ public class Userinterface {
         if (superhero != null) {
             System.out.println("Information" + "\n Name:" + " " + superhero.getName() + " " + "Human:" + " " + superhero.getisHuman() + " " + "Superpower" + " " + superhero.getSuperPower() + " " + "Year of creation" + " " + superhero.getCreationYear() + " " + "Strength" + " " + superhero.getStrength());
         } else {
-            System.out.println("Found nothing with this name."+ ConsoleColors.RED);
+            System.out.println("Found nothing with this name.");
         }
     }
 
@@ -124,14 +124,14 @@ public class Userinterface {
         if (editUserChoice == 1)
             editTool();
         else if (editUserChoice != 9) {
-            System.out.println("Please try again, choose between 1 or 9." + ConsoleColors.RED);
+            System.out.println("Please try again, choose between 1 or 9.");
         }
     }
 
     public void editTool() {
 
         if (controller.database.getHeroDatabase().size() == 0) {
-            System.out.println("There's no Superhero.Superhero registered"+ ConsoleColors.RED);
+            System.out.println("There's no Superhero.Superhero registered");
         } else {
             System.out.println("List of Superhero.Superhero's registered");
 
@@ -146,7 +146,7 @@ public class Userinterface {
             scanner.nextLine();
 
             if (numb - 1 >= controller.database.getHeroDatabase().size()) {
-                System.out.println("Invalid data, try again"+ ConsoleColors.RED);
+                System.out.println("Invalid data, try again");
             } else {
                 editHero = controller.database.getHeroDatabase().get(numb - 1);
                 System.out.println("Edit superhero" + editHero.getName() + " " + editHero.getSuperPower() + " " + editHero.getCreationYear() + " " + editHero.getStrength());
@@ -189,7 +189,7 @@ public class Userinterface {
     public int readIntger() {
         while (!scanner.hasNextInt()) {
             String text = scanner.next();
-            System.out.println(text + " " + "Invalid data, input a number please."+ ConsoleColors.RED);
+            System.out.println(text + " " + "Invalid data, input a number please.");
         }
         int result = scanner.nextInt();
         return result;
@@ -199,7 +199,7 @@ public class Userinterface {
     public int readDouble() {
         while (!scanner.hasNextDouble()) {
             String text = scanner.next();
-            System.out.println(text + " " + "Invalid data, input a number please."+ ConsoleColors.RED);
+            System.out.println(text + " " + "Invalid data, input a number please.");
         }
         int result = scanner.nextInt();
         return result;
@@ -211,7 +211,7 @@ public class Userinterface {
     private void deleteHero() {
 
         if (controller.database.getHeroDatabase().isEmpty()) {
-            System.out.println("No heroes found in our database"+ ConsoleColors.RED);
+            System.out.println("No heroes found in our database");
         } else {
 
             System.out.println("Choose hero you want to delete: \n");
@@ -231,7 +231,7 @@ public class Userinterface {
                     System.out.println("Going back");
                     break;
                 default:
-                    System.out.println("Input is not valid"+ ConsoleColors.RED);
+                    System.out.println("Input is not valid");
                     break;
 
 
