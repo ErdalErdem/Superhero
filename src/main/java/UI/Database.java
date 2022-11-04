@@ -5,7 +5,7 @@ import Superhero.Superhero;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Database {
+public class Database implements Comparable <Database>{
     private ArrayList<Superhero> heroDatabase;
     private ArrayList<Superhero> searchResult;
 
@@ -83,6 +83,11 @@ public class Database {
         heroDatabase.remove(deleteOnIndex);
     }
 
+
+    @Override
+    public int compareTo(Database o) {
+        return
+    }
 }
 
 

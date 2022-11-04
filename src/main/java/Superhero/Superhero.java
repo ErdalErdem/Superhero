@@ -58,4 +58,5 @@ public class Superhero {
         return "Real name: " + name + "\nSuperpower: " + superPower + "\nYear of publication: " + creationYear + "\nStrength: " + strength + "\n";
 
     }
+
 }

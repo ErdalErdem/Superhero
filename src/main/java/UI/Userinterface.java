@@ -7,7 +7,6 @@ import Superhero.Superhero;
 public class Userinterface {
     private Controller controller = new Controller();
 
-
     Scanner scanner = new Scanner(System.in);
 
     public void startProgram() {
@@ -20,8 +19,8 @@ public class Userinterface {
             System.out.println("""                  
                     1. Add Superhero.Superhero
                     2. Superhero.Superhero List
-                    3. Search Superhero.Superhero
-                    4. Edit Superhero.Superhero
+                    3. Search Superhero
+                    4. Edit Superhero
                     5. Delete hero
                     9. End Program
                     """);

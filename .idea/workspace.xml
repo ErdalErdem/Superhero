@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4c129410-604a-45c7-8ab5-2c998a9bafb8" name="Changes" comment="jnd" />
+    <list default="true" id="4c129410-604a-45c7-8ab5-2c998a9bafb8" name="Changes" comment="slettet testklassen">
+      <change afterPath="$PROJECT_DIR$/src/main/java/FileHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Superhero/Superhero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Superhero/Superhero.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/UI/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UI/Database.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/UI/Userinterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UI/Userinterface.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -92,6 +99,9 @@
       <workItem from="1667209925407" duration="2217000" />
       <workItem from="1667475912447" duration="941000" />
       <workItem from="1667477984894" duration="51000" />
+      <workItem from="1667478193682" duration="855000" />
+      <workItem from="1667512050982" duration="44000" />
+      <workItem from="1667547962035" duration="5577000" />
     </task>
     <task id="LOCAL-00001" summary="Database indført">
       <created>1662988153364</created>
@@ -240,7 +250,28 @@
       <option name="project" value="LOCAL" />
       <updated>1667477998467</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="justb testing">
+      <created>1667478213999</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1667478213999</updated>
+    </task>
+    <task id="LOCAL-00023" summary="slettet uiDesigner file">
+      <created>1667478329922</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1667478329922</updated>
+    </task>
+    <task id="LOCAL-00024" summary="slettet testklassen">
+      <created>1667478417437</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1667478417437</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -267,6 +298,9 @@
     <MESSAGE value="Superhero del 7" />
     <MESSAGE value="Package for consoleColors" />
     <MESSAGE value="jnd" />
-    <option name="LAST_COMMIT_MESSAGE" value="jnd" />
+    <MESSAGE value="justb testing" />
+    <MESSAGE value="slettet uiDesigner file" />
+    <MESSAGE value="slettet testklassen" />
+    <option name="LAST_COMMIT_MESSAGE" value="slettet testklassen" />
   </component>
 </project>
