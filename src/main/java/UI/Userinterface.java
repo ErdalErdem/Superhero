@@ -2,6 +2,7 @@ package UI;
 
 import java.io.FileNotFoundException;
 import java.util.Scanner;
+
 import Controller.Controller;
 import Superhero.Superhero;
 
@@ -19,8 +20,8 @@ public class Userinterface {
         while (userChoice != 9) {
             System.out.println("""                  
                     1. Add Superhero.Superhero
-                    2. Superhero.Superhero List
-                    3. Search Superhero
+                    2. Access The Superhero List
+                    3. Search For Superheroes
                     4. Edit Superhero
                     5. Delete hero
                     9. End Program
@@ -46,7 +47,7 @@ public class Userinterface {
             editSuperhero();
         else if (userChoice == 5)
             deleteHero();
-        else if (userChoice == 9)
+        else if (userChoice == 9) //Else if statement, for at kunne få superheroes i textfilen
             controller.saveData();
     }
 
@@ -217,7 +218,7 @@ public class Userinterface {
         } else {
 
             System.out.println("Choose hero you want to delete: \n");
-            for (Superhero hero :controller.database.getHeroDatabase()) {
+            for (Superhero hero : controller.database.getHeroDatabase()) {
                 System.out.println(controller.database.getHeroDatabase().indexOf(hero) + 1 + ". " + hero.getName());
             }
 
