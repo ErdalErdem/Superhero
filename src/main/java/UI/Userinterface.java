@@ -1,5 +1,6 @@
 package UI;
 
+import java.io.FileNotFoundException;
 import java.util.Scanner;
 import Controller.Controller;
 import Superhero.Superhero;
@@ -9,7 +10,7 @@ public class Userinterface {
 
     Scanner scanner = new Scanner(System.in);
 
-    public void startProgram() {
+    public void startProgram() throws FileNotFoundException {
         int userChoice = -1;
 
         System.out.println("Welcome to the hero collector\n" +
@@ -34,7 +35,7 @@ public class Userinterface {
 
     // brugers muligheder af valg
 
-    public void UserChoice(int userChoice) {
+    public void UserChoice(int userChoice) throws FileNotFoundException {
         if (userChoice == 1)
             addSuperhero(); //Crud operation
         else if (userChoice == 2)
@@ -45,6 +46,8 @@ public class Userinterface {
             editSuperhero();
         else if (userChoice == 5)
             deleteHero();
+        else if (userChoice == 9)
+            controller.saveData();
     }
 
     // tilføje superhelte

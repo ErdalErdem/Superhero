@@ -1,1 +1,21 @@
-Heyyy
+[Real name: Superman
+Superpower: Laser
+Year of publication: 1938
+Strength: 10000.0
+, Real name: Spiderman
+Superpower: Web
+Year of publication: 1962
+Strength: 7000.0
+, Real name: Iron man
+Superpower: Money
+Year of publication: 1963
+Strength: 8000.0
+, Real name: Hulk
+Superpower: strength
+Year of publication: 1962
+Strength: 10000.0
+, Real name: Batman
+Superpower: Money
+Year of publication: 1939
+Strength: 10000.0
+]
