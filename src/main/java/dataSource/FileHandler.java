@@ -9,7 +9,6 @@ import java.io.PrintStream;
 public class FileHandler {
     Database database = new Database();
     private final File file = new File("demo.txt");
-    //PrintStream ps = new PrintStream(file);
 
     public FileHandler() {
     }

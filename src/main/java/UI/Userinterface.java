@@ -57,20 +57,18 @@ public class Userinterface {
         System.out.println("Enter the superhero's real name:");
         String name = scanner.nextLine();
 
-       /* System.out.println("Is your superhero human?");
-        boolean isHuman = */
+        System.out.println("Is your superhero human?");
+        boolean isHuman = scanner.nextBoolean();
 
         System.out.println("Enter the superhero's power: ");
         String power = scanner.nextLine();
 
         System.out.println("Enter the superhero's year of publication: ");
-        // int year = scanner.nextInt();
         int year = readIntger();
 
         System.out.println("Enter the superhero's strength:");
-        // double strength = scanner.nextDouble();
         double strength = readDouble();
-        controller.database.addSuperheroes(name, true, power, year, strength);
+        controller.database.addSuperheroes(name, isHuman, power, year, strength);
     }
 
     // fremvisning af superhetle liste

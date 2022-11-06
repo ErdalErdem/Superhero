@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4c129410-604a-45c7-8ab5-2c998a9bafb8" name="Changes" comment="UserStory 10, not done yet">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Superhero/Superhero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Superhero/Superhero.java" afterDir="false" />
+    <list default="true" id="4c129410-604a-45c7-8ab5-2c998a9bafb8" name="Changes" comment="Sortering af navn i superhero klassen. &#10;Stadig på henholdsvis userstory 10-12">
+      <change beforePath="$PROJECT_DIR$/src/main/java/UI/Userinterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UI/Userinterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dataSource/FileHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dataSource/FileHandler.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +99,7 @@
       <workItem from="1667512050982" duration="44000" />
       <workItem from="1667547962035" duration="10843000" />
       <workItem from="1667658124827" duration="1523000" />
-      <workItem from="1667768856550" duration="329000" />
+      <workItem from="1667768856550" duration="741000" />
     </task>
     <task id="LOCAL-00001" summary="Database indført">
       <created>1662988153364</created>
@@ -290,7 +290,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667568785832</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Sortering af navn i superhero klassen. &#10;Stadig på henholdsvis userstory 10-12">
+      <created>1667769325778</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1667769325778</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -321,6 +328,7 @@
     <MESSAGE value="slettet uiDesigner file" />
     <MESSAGE value="slettet testklassen" />
     <MESSAGE value="UserStory 10, not done yet" />
-    <option name="LAST_COMMIT_MESSAGE" value="UserStory 10, not done yet" />
+    <MESSAGE value="Sortering af navn i superhero klassen. &#10;Stadig på henholdsvis userstory 10-12" />
+    <option name="LAST_COMMIT_MESSAGE" value="Sortering af navn i superhero klassen. &#10;Stadig på henholdsvis userstory 10-12" />
   </component>
 </project>
