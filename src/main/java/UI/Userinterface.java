@@ -11,6 +11,8 @@ public class Userinterface {
 
     Scanner scanner = new Scanner(System.in);
 
+    Boolean dataChanged = false;
+
     public void startProgram() throws FileNotFoundException {
         int userChoice = -1;
 
@@ -38,20 +40,27 @@ public class Userinterface {
     // brugers muligheder af valg
 
     public void UserChoice(int userChoice) throws FileNotFoundException {
-        if (userChoice == 1) {
+        if (dataChanged){
             controller.saveData();
+        }
+        if (userChoice == 1) {
             addSuperhero(); //Crud operation
+            dataChanged = true;
         }
         else if (userChoice == 2)
             superheroList(); //Crud operation
         else if (userChoice == 3)
             searchInput();
-        else if (userChoice == 4)
+        else if (userChoice == 4){
             editSuperhero();
-        else if (userChoice == 5)
+            dataChanged = true;
+        }
+        else if (userChoice == 5){
             deleteHero();
+            dataChanged = true;
+        }
         else if (userChoice == 9) //Else if statement, for at kunne få superheroes i textfilen
-            controller.saveData();
+            System.out.println("Closing Superhero..");
     }
 
     // tilføje superhelte
@@ -85,9 +94,9 @@ public class Userinterface {
     public void superheroList() {
 
         if (controller.database.getHeroDatabase().size() == 0) {
-            System.out.println("There's no Superhero.Superhero registered...\n");
+            System.out.println("There are no superheroes registered...\n");
         } else {
-            System.out.println("List of Superhero.Superhero's registered\n");
+            System.out.println("List of superheroes registered\n");
             for (Superhero superhero : controller.database.getHeroDatabase()) {
                 System.out.println("Name:" + " " + superhero.getName() + " " + "Human:" + " " + superhero.getisHuman() + " " + "Superpower:" + " " + superhero.getSuperPower() + " " + "Year of creation" + " " + superhero.getCreationYear() + " " + "Strength" + " " + superhero.getStrength());
             }
