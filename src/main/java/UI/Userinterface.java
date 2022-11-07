@@ -19,7 +19,7 @@ public class Userinterface {
 
         while (userChoice != 9) {
             System.out.println("""                  
-                    1. Add Superhero.Superhero
+                    1. Add Superhero.
                     2. Access The Superhero List
                     3. Search For Superheroes
                     4. Edit Superhero
