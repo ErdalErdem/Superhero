@@ -38,8 +38,10 @@ public class Userinterface {
     // brugers muligheder af valg
 
     public void UserChoice(int userChoice) throws FileNotFoundException {
-        if (userChoice == 1)
+        if (userChoice == 1) {
+            controller.saveData();
             addSuperhero(); //Crud operation
+        }
         else if (userChoice == 2)
             superheroList(); //Crud operation
         else if (userChoice == 3)
@@ -68,6 +70,8 @@ public class Userinterface {
 
         System.out.println("Enter the superhero's power: ");
         String power = scanner.nextLine();
+
+        //scanner.nextLine();
 
         System.out.println("Enter the superhero's year of publication: ");
         int year = scanner.nextInt();
