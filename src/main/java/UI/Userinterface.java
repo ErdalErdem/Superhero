@@ -24,6 +24,7 @@ public class Userinterface {
                     3. Search For Superheroes
                     4. Edit Superhero
                     5. Delete hero
+                    6. Which Superhero attribute do you want it to be sorted by
                     9. End Program
                     """);
 

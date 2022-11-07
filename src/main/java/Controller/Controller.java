@@ -10,6 +10,6 @@ public class Controller {
 
     public void saveData() throws FileNotFoundException {
         FileHandler fileHandler = new FileHandler();
-        fileHandler.saveData();
+        fileHandler.saveData(database.getHeroDatabase());
     }
 }
