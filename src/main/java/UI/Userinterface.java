@@ -33,22 +33,22 @@ public class Userinterface {
             userChoice = scanner.nextInt();
             scanner.nextLine(); // Håndtering af Scanner bug
             UserChoice(userChoice);
-
+            if (dataChanged){
+                controller.saveData();
+            }
         }
     }
 
     // brugers muligheder af valg
 
     public void UserChoice(int userChoice) throws FileNotFoundException {
-        if (dataChanged){
-            controller.saveData();
-        }
         if (userChoice == 1) {
             addSuperhero(); //Crud operation
             dataChanged = true;
         }
         else if (userChoice == 2)
-            superheroList(); //Crud operation
+            //superheroList(); //Crud operation
+            controller.getHeroDatabaseFile();
         else if (userChoice == 3)
             searchInput();
         else if (userChoice == 4){
