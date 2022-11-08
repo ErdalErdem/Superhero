@@ -26,7 +26,7 @@ public class Userinterface {
                     3. Search For Superheroes
                     4. Edit Superhero
                     5. Delete hero
-                    6. Which Superhero attribute do you want it to be sorted by
+                    6. Sort by attribute
                     9. End Program
                     """);
 
@@ -59,8 +59,28 @@ public class Userinterface {
         else if (userChoice == 5){
             deleteHero();
             dataChanged = true;
-        }
-        else if (userChoice == 9) //Else if statement, for at kunne få superheroes i textfilen
+
+        } else if (userChoice == 6) {
+            System.out.println("Which attribute do you want it to be sorted by");
+            System.out.println("1. Name");
+            System.out.println("2. IsHuman");
+            System.out.println("3. Superpower");
+            System.out.println("4. CreationYear");
+            System.out.println("5. Strength");
+            if (userChoice == 1){
+
+            } else if (userChoice == 2) {
+
+            } else if (userChoice == 3) {
+
+            }
+            else if (userChoice == 4){
+
+            }
+            else if (userChoice == 5) {
+
+            }
+        } else if (userChoice == 9) //Else if statement, for at kunne få superheroes i textfilen
             System.out.println("Closing Superhero..");
     }
 
@@ -260,7 +280,8 @@ public class Userinterface {
             }
         }
     }
-}
+    }
+
 
 
 
