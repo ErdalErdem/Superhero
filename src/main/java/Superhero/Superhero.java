@@ -15,7 +15,6 @@ public class Superhero implements Comparable <Superhero>{ // Sortering
         this.creationYear = creationYear;
         this.strength = strength;
     }
-
     public String getName() {
         return name;
     }

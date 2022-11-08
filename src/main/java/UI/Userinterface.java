@@ -254,7 +254,6 @@ public class Userinterface {
                     System.out.println("Input is not valid");
                     break;
 
-
             }
         }
     }
