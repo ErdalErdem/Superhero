@@ -46,9 +46,10 @@ public class Userinterface {
             addSuperhero(); //Crud operation
             dataChanged = true;
         }
-        else if (userChoice == 2)
+        else if (userChoice == 2) {
             //superheroList(); //Crud operation
-            controller.getHeroDatabaseFile();
+            System.out.println(controller.getHeroDatabaseFile());
+        }
         else if (userChoice == 3)
             searchInput();
         else if (userChoice == 4){
