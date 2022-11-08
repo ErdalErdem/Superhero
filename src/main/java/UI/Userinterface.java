@@ -72,7 +72,7 @@ public class Userinterface {
         System.out.println("Is your superhero human?");
         String isHumanOrNotString = scanner.next();
         boolean humanOrNot = false;
-        if (isHumanOrNotString.equalsIgnoreCase("Ja")) {
+        if (isHumanOrNotString.equalsIgnoreCase("Ja")) { //Fix later
             humanOrNot = true;
         }
         scanner.nextLine();
@@ -91,7 +91,7 @@ public class Userinterface {
     }
 
     // fremvisning af superhetle liste
-    public void superheroList() {
+/*    public void superheroList() {
 
         if (controller.database.getHeroDatabase().size() == 0) {
             System.out.println("There are no superheroes registered...\n");
@@ -101,7 +101,9 @@ public class Userinterface {
                 System.out.println("Name:" + " " + superhero.getName() + " " + "Human:" + " " + superhero.getisHuman() + " " + "Superpower:" + " " + superhero.getSuperPower() + " " + "Year of creation" + " " + superhero.getCreationYear() + " " + "Strength" + " " + superhero.getStrength());
             }
         }
-    }
+    }*/
+
+
 
     // søgning af superhelte.
 
