@@ -4,7 +4,7 @@ import Superhero.Superhero;
 
 import java.util.Comparator;
 
-public abstract class IsHumanComparator implements Comparator <Superhero> {
+public class IsHumanComparator implements Comparator <Superhero> {
 
     public int compare(Superhero o1, Superhero o2) {
         return Boolean.compare(o1.getisHuman(), o2.getisHuman());

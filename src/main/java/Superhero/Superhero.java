@@ -1,6 +1,6 @@
 package Superhero;
 
-public class Superhero implements Comparable <Superhero>{ // Sortering
+public class Superhero{
 
     private String name;
     private boolean isHuman;
@@ -58,9 +58,4 @@ public class Superhero implements Comparable <Superhero>{ // Sortering
 
     }
 
-    //Sortering af Superhelte objekter efter navn
-    @Override
-    public int compareTo(Superhero o) {
-        return name.compareTo(o.name); // Returner en sortering efter navn
-    }
 }

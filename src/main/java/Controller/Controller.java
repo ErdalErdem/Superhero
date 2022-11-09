@@ -34,5 +34,17 @@ public class Controller {
     public ArrayList<Superhero> SortSuperNames(ArrayList<Superhero> unsortedList) { //Sorts data file with Database class method
         return database.SortSuperNames(unsortedList);
     }
+    public ArrayList <Superhero> sortByIsHumanOrNot (ArrayList<Superhero> list1){
+        return database.sortByIsHumanOrNot(list1);
+    }
+    public ArrayList <Superhero> sortSuperPower (ArrayList<Superhero> list2){
+        return database.sortSuperPower(list2);
+    }
+    public ArrayList <Superhero> sortCreationYear (ArrayList<Superhero> list3){
+        return database.sortCreationYear(list3);
+    }
+    public ArrayList <Superhero> sortSuperStrength (ArrayList<Superhero> list4){
+        return database.sortSuperStrength(list4);
+    }
 
 }

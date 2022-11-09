@@ -4,7 +4,7 @@ import Superhero.Superhero;
 
 import java.util.Comparator;
 
-public abstract class SuperPowerComparator implements Comparator <Superhero> {
+public class SuperPowerComparator implements Comparator <Superhero> {
 
     @Override
     public int compare(Superhero o1, Superhero o2) {

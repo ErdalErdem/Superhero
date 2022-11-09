@@ -3,13 +3,11 @@ package UI;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Scanner;
-
 import Controller.Controller;
 import Superhero.Superhero;
 
 public class Userinterface {
     private Controller controller = new Controller();
-
     Scanner scanner = new Scanner(System.in);
 
     Boolean dataChanged = false;
@@ -72,15 +70,16 @@ public class Userinterface {
             if (userChoiceSort == 1){
                 System.out.println(controller.SortSuperNames(controller.readData()));
             } else if (userChoiceSort == 2) {
+                System.out.println(controller.sortByIsHumanOrNot(controller.readData()));
 
             } else if (userChoiceSort == 3) {
-
+                System.out.println(controller.sortSuperPower(controller.readData()));
             }
             else if (userChoiceSort == 4){
-
+                System.out.println(controller.sortCreationYear(controller.readData()));
             }
             else if (userChoiceSort == 5) {
-
+                System.out.println(controller.sortSuperStrength(controller.readData()));
             }
         } else if (userChoice == 9) //Else if statement, for at kunne få superheroes i textfilen
             System.out.println("Closing Superhero..");

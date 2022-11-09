@@ -5,15 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4c129410-604a-45c7-8ab5-2c998a9bafb8" name="Changes" comment="Fået lavet sortering (Userstory 13)">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_03_11_2022__13_01__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_03_11_2022__13_01__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Comparator/NameComparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Comparator/NameComparator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Comparator/CreationYearComparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Comparator/CreationYearComparator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Comparator/IsHumanComparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Comparator/IsHumanComparator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Comparator/StrengthComparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Comparator/StrengthComparator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Comparator/SuperPowerComparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Comparator/SuperPowerComparator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Superhero/Superhero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Superhero/Superhero.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/UI/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UI/Database.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/UI/Userinterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UI/Userinterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dataSource/FileHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dataSource/FileHandler.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

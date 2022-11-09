@@ -64,7 +64,30 @@ public class Database {
         Collections.sort(nameSortedList, new NameComparator());
         return nameSortedList;
     }
-
+    public ArrayList <Superhero> sortByIsHumanOrNot (ArrayList<Superhero> list1){
+        ArrayList <Superhero> humanOrNotList = new ArrayList<>();
+        humanOrNotList.addAll(list1);
+        Collections.sort(humanOrNotList, new IsHumanComparator());
+        return humanOrNotList;
+    }
+    public ArrayList <Superhero> sortSuperPower(ArrayList<Superhero> list2){
+        ArrayList<Superhero> superPowerList = new ArrayList<>();
+        superPowerList.addAll(list2);
+        Collections.sort(superPowerList, new SuperPowerComparator());
+        return superPowerList;
+    }
+    public ArrayList <Superhero> sortCreationYear (ArrayList <Superhero> list3){
+        ArrayList <Superhero> creationYearList = new ArrayList<>();
+        creationYearList.addAll(list3);
+        Collections.sort(creationYearList, new CreationYearComparator());
+        return creationYearList;
+    }
+    public ArrayList <Superhero> sortSuperStrength(ArrayList<Superhero> list4){
+        ArrayList<Superhero> strengthList = new ArrayList<>();
+        strengthList.addAll(list4);
+        Collections.sort(strengthList, new StrengthComparator());
+        return strengthList;
+    }
 }
 
 
