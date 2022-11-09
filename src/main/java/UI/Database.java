@@ -1,16 +1,14 @@
 package UI;
 
 import Superhero.Superhero;
-
+import Comparator.*;
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class Database {
     private ArrayList<Superhero> heroDatabase = new ArrayList<>();
     private ArrayList<Superhero> searchResult = new ArrayList<>();
 
-    public void tilhoejSuperheroes(String name, boolean isHuman, String superPower, int creationYear, double strength) {
-        heroDatabase.add(new Superhero(name, isHuman, superPower, creationYear, strength));
-    }
 
     public Superhero findSuperhero(String name) {
         for (Superhero p : heroDatabase) {
@@ -39,7 +37,7 @@ public class Database {
         return heroDatabase;
     }
 
-    public void addToDatabse(String name, boolean isHuman, String superPower, int creationYear, double strength) {
+    public void addToDatabase(String name, boolean isHuman, String superPower, int creationYear, double strength) {
         heroDatabase.add(new Superhero(name, isHuman, superPower, creationYear, strength));
     }
 
@@ -58,6 +56,13 @@ public class Database {
         System.out.println(heroDatabase.get(deleteOnIndex).getName() + " has been deleted");
 
         heroDatabase.remove(deleteOnIndex);
+    }
+
+    public ArrayList<Superhero> SortSuperNames(ArrayList<Superhero> unsortedList) {
+        ArrayList<Superhero> nameSortedList = new ArrayList<>();
+        nameSortedList.addAll(unsortedList);
+        Collections.sort(nameSortedList, new NameComparator());
+        return nameSortedList;
     }
 
 }

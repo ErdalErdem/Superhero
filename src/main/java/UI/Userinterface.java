@@ -1,6 +1,7 @@
 package UI;
 
 import java.io.FileNotFoundException;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 import Controller.Controller;
@@ -48,7 +49,7 @@ public class Userinterface {
         }
         else if (userChoice == 2) {
             //superheroList(); //Crud operation
-            System.out.println(controller.getHeroDatabaseFile());
+            System.out.println(controller.SortSuperNames(controller.readData())); //Sorts list by names
         }
         else if (userChoice == 3)
             searchInput();
@@ -61,23 +62,24 @@ public class Userinterface {
             dataChanged = true;
 
         } else if (userChoice == 6) {
+            int userChoiceSort = scanner.nextInt();
             System.out.println("Which attribute do you want it to be sorted by");
             System.out.println("1. Name");
             System.out.println("2. IsHuman");
             System.out.println("3. Superpower");
             System.out.println("4. CreationYear");
             System.out.println("5. Strength");
-            if (userChoice == 1){
+            if (userChoiceSort == 1){
+                System.out.println(controller.SortSuperNames(controller.readData()));
+            } else if (userChoiceSort == 2) {
 
-            } else if (userChoice == 2) {
-
-            } else if (userChoice == 3) {
-
-            }
-            else if (userChoice == 4){
+            } else if (userChoiceSort == 3) {
 
             }
-            else if (userChoice == 5) {
+            else if (userChoiceSort == 4){
+
+            }
+            else if (userChoiceSort == 5) {
 
             }
         } else if (userChoice == 9) //Else if statement, for at kunne få superheroes i textfilen
@@ -280,7 +282,8 @@ public class Userinterface {
             }
         }
     }
-    }
+
+}
 
 
 
