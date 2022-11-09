@@ -79,13 +79,13 @@ public class Database {
     public ArrayList <Superhero> sortCreationYear (ArrayList <Superhero> list3){
         ArrayList <Superhero> creationYearList = new ArrayList<>();
         creationYearList.addAll(list3);
-        Collections.sort(creationYearList, new CreationYearComparator());
+        Collections.sort(creationYearList, new CreationYearComparator().reversed());
         return creationYearList;
     }
     public ArrayList <Superhero> sortSuperStrength(ArrayList<Superhero> list4){
         ArrayList<Superhero> strengthList = new ArrayList<>();
         strengthList.addAll(list4);
-        Collections.sort(strengthList, new StrengthComparator());
+        Collections.sort(strengthList, new StrengthComparator().reversed());
         return strengthList;
     }
 }
