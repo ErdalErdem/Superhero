@@ -1,12 +1,10 @@
 package Controller;
 
 import Superhero.Superhero;
-import UI.Database;
+import db.Database;
 import dataSource.FileHandler;
 
 import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.PrintStream;
 import java.util.ArrayList;
 
 

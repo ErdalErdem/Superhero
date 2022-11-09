@@ -92,11 +92,8 @@ public class Userinterface {
         String name = scanner.nextLine();
 
         System.out.println("Is your superhero human?");
-        String isHumanOrNotString = scanner.next();
-        boolean humanOrNot = false;
-        if (isHumanOrNotString.equalsIgnoreCase("Ja")) { //Fix later
-            humanOrNot = true;
-        }
+        Boolean isHumanOrNotString = scanner.hasNextLine();
+
         scanner.nextLine();
 
         System.out.println("Enter the superhero's power: ");
@@ -109,7 +106,7 @@ public class Userinterface {
 
         System.out.println("Enter the superhero's strength:");
         double strength = readDouble();
-        controller.database.addSuperheroes(name, humanOrNot, power, year, strength);
+        controller.database.addSuperheroes(name, isHumanOrNotString, power, year, strength);
     }
 
     // fremvisning af superhetle liste

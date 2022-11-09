@@ -4,16 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4c129410-604a-45c7-8ab5-2c998a9bafb8" name="Changes" comment="Fået lavet sortering (Userstory 13)">
+    <list default="true" id="4c129410-604a-45c7-8ab5-2c998a9bafb8" name="Changes" comment="Forbinde sortering til userinterface (UserStory 13)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Comparator/CreationYearComparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Comparator/CreationYearComparator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Comparator/IsHumanComparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Comparator/IsHumanComparator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Comparator/StrengthComparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Comparator/StrengthComparator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Comparator/SuperPowerComparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Comparator/SuperPowerComparator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Superhero/Superhero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Superhero/Superhero.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/UI/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UI/Database.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/UI/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/db/Database.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/UI/Userinterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UI/Userinterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dataSource/FileHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dataSource/FileHandler.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -351,7 +347,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667913547870</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="Forbinde sortering til userinterface (UserStory 13)">
+      <created>1668029214427</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1668029214428</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -387,6 +390,7 @@
     <MESSAGE value="File output fix" />
     <MESSAGE value="Created getHeroDatabaseFile method" />
     <MESSAGE value="readHero" />
-    <option name="LAST_COMMIT_MESSAGE" value="readHero" />
+    <MESSAGE value="Forbinde sortering til userinterface (UserStory 13)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Forbinde sortering til userinterface (UserStory 13)" />
   </component>
 </project>

@@ -1,4 +1,4 @@
-package UI;
+package db;
 
 import Superhero.Superhero;
 import Comparator.*;
