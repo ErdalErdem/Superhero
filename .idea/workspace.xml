@@ -4,14 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4c129410-604a-45c7-8ab5-2c998a9bafb8" name="Changes" comment="Boolean fungere nu">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_03_11_2022,_13_01_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_03_11_2022__13_01__Changes_.xml" beforeDir="false" />
+    <list default="true" id="4c129410-604a-45c7-8ab5-2c998a9bafb8" name="Changes" comment="Added user story #14">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/UI/Userinterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UI/Userinterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dataSource/FileHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dataSource/FileHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/db/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/db/Database.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,6 +105,7 @@
       <workItem from="1667996726980" duration="521000" />
       <workItem from="1667997286504" duration="969000" />
       <workItem from="1668011961578" duration="8330000" />
+      <workItem from="1668096097027" duration="1036000" />
     </task>
     <task id="LOCAL-00001" summary="Database indført">
       <created>1662988153364</created>
@@ -370,7 +366,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668038518632</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="Added user story #14">
+      <created>1668095835598</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1668095835598</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -409,7 +412,8 @@
     <MESSAGE value="Forbinde sortering til userinterface (UserStory 13)" />
     <MESSAGE value="Restructured UI" />
     <MESSAGE value="Boolean fungere nu" />
-    <option name="LAST_COMMIT_MESSAGE" value="Boolean fungere nu" />
+    <MESSAGE value="Added user story #14" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added user story #14" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

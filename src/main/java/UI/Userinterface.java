@@ -396,11 +396,11 @@ public class Userinterface {
     }
 
     private void listHeader() {
-        System.out.printf("┃ %-20s │ %-15s │ %-20s │ %-8s │ %-13s ┃ %n", "Name", "isHuman", "superPower", "creationYear", "strength");
+        System.out.printf("┃ %-20s │ %-15s │ %-20s │ %-10s │ %-15s ┃ %n", "Name", "isHuman", "superPower", "creationYear", "strength");
     }
 
     private String formatPrint(Superhero hero) {
-        return String.format("┃ %-20s │ %-15s │ %-20s │ %-8b │ %-2f ┃", hero.getName(), hero.getisHuman(), hero.getSuperPower(), hero.getCreationYear(), hero.getStrength());
+        return String.format("┃ %-20s │ %-15s │ %-20s │ %-12d │ %-15f ┃", hero.getName(), hero.getisHuman(), hero.getSuperPower(), hero.getCreationYear(), hero.getStrength());
     }
 }
 
