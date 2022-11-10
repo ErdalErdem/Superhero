@@ -8,7 +8,6 @@ import java.util.Comparator;
 
 public class Database {
     private ArrayList<Superhero> heroDatabase = new ArrayList<>();
-    private ArrayList<Superhero> searchResult = new ArrayList<>();
 
 
     public Superhero findSuperhero(String name) {
@@ -20,15 +19,6 @@ public class Database {
         return null;
     }
 
-    public ArrayList<Superhero> findSuperheroes(String name) {
-        searchResult.clear();
-        for (Superhero p : heroDatabase) {
-            if (p.getName().equals(name))
-                searchResult.add(p);
-        }
-        return searchResult;
-    }
-
     public void addSuperheroes(String name, boolean isHuman, String superPower, int creationYear, double strength) {
         Superhero superhero = new Superhero(name, isHuman, superPower, creationYear, strength);
         heroDatabase.add(superhero);
@@ -38,9 +28,6 @@ public class Database {
         return heroDatabase;
     }
 
-    public void addToDatabase(String name, boolean isHuman, String superPower, int creationYear, double strength) {
-        heroDatabase.add(new Superhero(name, isHuman, superPower, creationYear, strength));
-    }
 
     public void editSuperhero(String name, boolean isHuman, String superPower, int creationYear, double strength) {
         Superhero editSuperhero = new Superhero(name, isHuman, superPower, creationYear, strength);
@@ -96,16 +83,16 @@ public class Database {
             case 1 -> comparator1 = new NameComparator();
             case 2 -> comparator1 = new IsHumanComparator();
             case 3 -> comparator1 = new SuperPowerComparator();
-            case 4 -> comparator1 = new CreationYearComparator();
-            case 5 -> comparator1 = new StrengthComparator();
+            case 4 -> comparator1 = new CreationYearComparator().reversed();
+            case 5 -> comparator1 = new StrengthComparator().reversed();
         }
 
         switch (b) {
             case 1 -> comparator2 = new NameComparator();
             case 2 -> comparator2 = new IsHumanComparator();
             case 3 -> comparator2 = new SuperPowerComparator();
-            case 4 -> comparator2 = new CreationYearComparator();
-            case 5 -> comparator2 = new StrengthComparator();
+            case 4 -> comparator2 = new CreationYearComparator().reversed();
+            case 5 -> comparator2 = new StrengthComparator().reversed();
         }
         if(!comparator1.getClass().equals(comparator2.getClass()))
             Collections.sort(sortingList, comparator1.thenComparing(comparator2));

@@ -9,9 +9,7 @@ import Superhero.Superhero;
 public class Userinterface {
     private Controller controller = new Controller();
     Scanner scanner = new Scanner(System.in);
-
     Boolean dataChanged = false;
-    private Boolean isHumanOrNotString;
 
     public void startProgram() throws FileNotFoundException {
         int userChoice = -1;
@@ -26,7 +24,6 @@ public class Userinterface {
                     3. Search For Superheroes
                     4. Edit Superhero
                     5. Delete hero
-                    6. Sort
                     9. End Program
                     """);
 
@@ -39,36 +36,26 @@ public class Userinterface {
         }
     }
 
-    // brugers muligheder af valg
+    // Brugerens valgmuligheder i menuen
 
     public void UserChoice(int userChoice) throws FileNotFoundException {
         if (userChoice == 1) {
             addSuperhero(); //Crud operation
             dataChanged = true;
         }
-/*        else if (userChoice == 2) {
-            //superheroList(); //Crud operation
-            System.out.println(controller.SortSuperNames(controller.readData())); //Sorts list by names*/
         else if (userChoice == 2) {
-            System.out.println("Which attribute do you want it to be sorted by");
-            System.out.println("1. Name");
-            System.out.println("2. IsHuman");
-            System.out.println("3. Superpower");
-            System.out.println("4. CreationYear");
-            System.out.println("5. Strength");
+            System.out.println("""
+                    Which attribute do you want your superheroes to be sorted by?
+                    1. Name
+                    2. Is Human
+                    3. Superpower
+                    4. Creation year
+                    5. Strength
+                    6. Sort by two attributes
+                    7. Show unsorted list
+                    """);
             int userChoiceSort = scanner.nextInt();
-            if (userChoiceSort == 1) {
-                System.out.println(controller.SortSuperNames(controller.readData()));
-            } else if (userChoiceSort == 2) {
-                System.out.println(controller.sortByIsHumanOrNot(controller.readData()));
-
-            } else if (userChoiceSort == 3) {
-                System.out.println(controller.sortSuperPower(controller.readData()));
-            } else if (userChoiceSort == 4) {
-                System.out.println(controller.sortCreationYear(controller.readData()));
-            } else if (userChoiceSort == 5) {
-                System.out.println(controller.sortSuperStrength(controller.readData()));
-            }
+            handleSort(userChoiceSort);
         } else if (userChoice == 3)
             searchInput();
         else if (userChoice == 4) {
@@ -77,9 +64,7 @@ public class Userinterface {
         } else if (userChoice == 5) {
             deleteHero();
             dataChanged = true;
-        } else if (userChoice == 6) {
-            sortByPrimaryAndSecondary();
-        } else if (userChoice == 9) //Else if statement, for at kunne få superheroes i textfilen
+        } else if (userChoice == 9)
             System.out.println("Closing Superhero..");
     }
 
@@ -90,7 +75,7 @@ public class Userinterface {
         String name = scanner.nextLine();
 
         System.out.println("Is your superhero human?");
-        boolean isHuman = true;
+        boolean isHuman = false;
         int valg;
         do {
             System.out.println("\nType 1 for Yes\nType 2 for No");
@@ -159,7 +144,7 @@ public class Userinterface {
                 """);
         while (editUserChoice != 9) {
             System.out.println("""
-                    1. Edit 
+                    1. Edit
                     9. Back to main menu
                     """);
 
@@ -234,25 +219,23 @@ public class Userinterface {
         }
     }
 
-    // Bruger velighed: Kode der forhindre bruger at lave ERRORS.
+    // Bruger venlighed: Kode der forhindre bruger at lave ERRORS.
 
     public int readInt() {
         while (!scanner.hasNextInt()) {
             String text = scanner.next();
-            System.out.println(text + " " + "Invalid data, input a number please.");
+            System.out.println(text + " " + "Invalid data, enter a valid integer.");
         }
-        int result = scanner.nextInt();
-        return result;
+        return scanner.nextInt();
     }
 
 
     public int readDouble() {
         while (!scanner.hasNextDouble()) {
             String text = scanner.next();
-            System.out.println(text + " " + "Invalid data, input a number please.");
+            System.out.println(text + " " + "Invalid data, enter a valid double.");
         }
-        int result = scanner.nextInt();
-        return result;
+        return scanner.nextInt();
     }
 
 
@@ -287,121 +270,78 @@ public class Userinterface {
         }
     }
 
-/*    public void sortByPrimaryAndSecondary() {
-        int menuchoice;
-        int choice1 = 0;
-        int choice2 = 0;
-
-        System.out.println("Choose primary sorting");
-        System.out.println(""" 
-                1. Name
-                2. Is your superhero human
-                3. Superpower
-                4. Creation year
-                5. Strength
-                9. Close 
-                """);
-        menuchoice = readInt();
-        switch (menuchoice) {
-            case 1 -> choice1 = 1;
-            case 2 -> choice1 = 2;
-            case 3 -> choice1 = 3;
-            case 4 -> choice1 = 4;
-            case 5 -> choice1 = 5;
-            default -> System.out.println("Invalid input");
+    public void handleSort(int userInput){ //Håndterer menuen for når der skal vælges type af sortering
+        switch (userInput) {
+            case 1 -> {
+                formatPrint(controller.SortSuperNames(controller.readData()));
+            }
+            case 2 -> {
+                formatPrint(controller.sortByIsHumanOrNot(controller.readData()));
+            }
+            case 3 -> {
+                formatPrint(controller.sortSuperPower(controller.readData()));
+            }
+            case 4 -> {
+                formatPrint(controller.sortCreationYear(controller.readData()));
+            }
+            case 5 -> {
+                formatPrint(controller.sortSuperStrength(controller.readData()));
+            }
+            case 6 -> sortByPrimaryAndSecondary();
+            case 7 -> System.out.println(controller.readData());
         }
-        System.out.println("Choose secondary sorting");
-        System.out.println(""" 
-                1. Name
-                2. Is your superhero human
-                3. Superpower
-                4. Creation year
-                5. Strength
-                9. Close 
-                """);
-        menuchoice = readInt();
-        switch (menuchoice) {
-            case 1 -> choice2 = 1;
-            case 2 -> choice2 = 2;
-            case 3 -> choice2 = 3;
-            case 4 -> choice2 = 4;
-            case 5 -> choice2 = 5;
-            default -> System.out.println("Invalid input");
-        }
-        listHeader();
-     ArrayList<Superhero> sortingList = new ArrayList<>();
-        try {
-            sortingList = controller.sortByPrimarySecondary(controller.readData() ,choice1, choice2);
-        } catch (IllegalArgumentException e) {
-            System.out.println("Invalid input, cant choice same sorting category");
-        }
-        listHeader();
-        for (Superhero superhero : sortingList) {
-            System.out.println(formatPrint(superhero));
-        }
-    }*/
+    }
 
     public void sortByPrimaryAndSecondary() {
-        int menuchoice;
-        int choice1 = 0;
-        int choice2 = 0;
-
-        System.out.println("Choose primary sorting");
+        int attribute1 = 0;
+        int attribute2 = 0;
         System.out.println(""" 
+                Choose primary attribute:
                 1. Name
                 2. Is your superhero human
                 3. Superpower
                 4. Creation year
                 5. Strength
-                9. Close 
                 """);
-        menuchoice = readInt();
-        switch (menuchoice) {
-            case 1 -> choice1 = 1;
-            case 2 -> choice1 = 2;
-            case 3 -> choice1 = 3;
-            case 4 -> choice1 = 4;
-            case 5 -> choice1 = 5;
-            default -> System.out.println("Invalid input");
-        }
-        System.out.println("Choose secondary sorting");
+        int menuChoice = readInt();
+        attribute1 = getAttribute(attribute1, menuChoice);
         System.out.println(""" 
+                Choose secondary attribute:
                 1. Name
                 2. Is your superhero human
                 3. Superpower
                 4. Creation year
                 5. Strength
-                9. Close 
                 """);
-        menuchoice = readInt();
-        switch (menuchoice) {
-            case 1 -> choice2 = 1;
-            case 2 -> choice2 = 2;
-            case 3 -> choice2 = 3;
-            case 4 -> choice2 = 4;
-            case 5 -> choice2 = 5;
-            default -> System.out.println("Invalid input");
-        }
-        //listHeader();
-        ArrayList<Superhero> sortingList = new ArrayList<>();
+        menuChoice = readInt();
+        attribute2 = getAttribute(attribute2, menuChoice);
         try {
-            sortingList = controller.sortByPrimarySecondary(controller.readData() ,choice1, choice2);
+            ArrayList<Superhero> sortingList = controller.sortByPrimarySecondary(controller.readData() , attribute1, attribute2);
+            formatPrint(sortingList);
         } catch (IllegalArgumentException e) {
-            System.out.println("Invalid input, cant choice same sorting category");
-        }
-        listHeader();
-        for (Superhero superhero : sortingList) {
-            System.out.println(formatPrint(superhero));
+            System.out.println("Sorting unsuccessful, cant sort by two same attributes");
         }
     }
 
-    private void listHeader() {
+    private int getAttribute(int attribute, int menuChoice) {
+        switch (menuChoice) {
+            case 1 -> attribute = 1;
+            case 2 -> attribute = 2;
+            case 3 -> attribute = 3;
+            case 4 -> attribute = 4;
+            case 5 -> attribute = 5;
+            default -> System.out.println("Invalid input");
+        }
+        return attribute;
+    }
+
+    private void formatPrint(ArrayList<Superhero> sortingList) {
         System.out.printf("┃ %-20s │ %-15s │ %-20s │ %-10s │ %-15s ┃ %n", "Name", "isHuman", "superPower", "creationYear", "strength");
+        for (Superhero s : sortingList) {
+            System.out.printf("┃ %-20s │ %-15s │ %-20s │ %-12d │ %-15f ┃%n", s.getName(), s.getisHuman(), s.getSuperPower(), s.getCreationYear(), s.getStrength());
+        }
     }
 
-    private String formatPrint(Superhero hero) {
-        return String.format("┃ %-20s │ %-15s │ %-20s │ %-12d │ %-15f ┃", hero.getName(), hero.getisHuman(), hero.getSuperPower(), hero.getCreationYear(), hero.getStrength());
-    }
 }
 
 
