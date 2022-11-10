@@ -26,13 +26,14 @@ public class Userinterface {
                     3. Search For Superheroes
                     4. Edit Superhero
                     5. Delete hero
+                    6. Sort
                     9. End Program
                     """);
 
             userChoice = scanner.nextInt();
             scanner.nextLine(); // Håndtering af Scanner bug
             UserChoice(userChoice);
-            if (dataChanged){
+            if (dataChanged) {
                 controller.saveData();
             }
         }
@@ -56,32 +57,30 @@ public class Userinterface {
             System.out.println("4. CreationYear");
             System.out.println("5. Strength");
             int userChoiceSort = scanner.nextInt();
-            if (userChoiceSort == 1){
+            if (userChoiceSort == 1) {
                 System.out.println(controller.SortSuperNames(controller.readData()));
             } else if (userChoiceSort == 2) {
                 System.out.println(controller.sortByIsHumanOrNot(controller.readData()));
 
             } else if (userChoiceSort == 3) {
                 System.out.println(controller.sortSuperPower(controller.readData()));
-            }
-            else if (userChoiceSort == 4){
+            } else if (userChoiceSort == 4) {
                 System.out.println(controller.sortCreationYear(controller.readData()));
-            }
-            else if (userChoiceSort == 5) {
+            } else if (userChoiceSort == 5) {
                 System.out.println(controller.sortSuperStrength(controller.readData()));
             }
-        }
-        else if (userChoice == 3)
+        } else if (userChoice == 3)
             searchInput();
-        else if (userChoice == 4){
+        else if (userChoice == 4) {
             editSuperhero();
             dataChanged = true;
-        }
-        else if (userChoice == 5){
+        } else if (userChoice == 5) {
             deleteHero();
             dataChanged = true;
-        }
-        else if (userChoice == 9) //Else if statement, for at kunne få superheroes i textfilen
+        } else if (userChoice == 6) {
+            sortByPrimaryAndSecondary();
+            dataChanged = true;
+        } else if (userChoice == 9) //Else if statement, for at kunne få superheroes i textfilen
             System.out.println("Closing Superhero..");
     }
 
@@ -102,7 +101,7 @@ public class Userinterface {
                 case 2 -> isHuman = false;
                 default -> System.out.println("Invalid input, try again");
             }
-        } while (valg != 1 && valg != 2) ;
+        } while (valg != 1 && valg != 2);
 
 
         scanner.nextLine();
@@ -165,7 +164,7 @@ public class Userinterface {
                     9. Back to main menu
                     """);
 
-            editUserChoice = readIntger();
+            editUserChoice = readInt();
             scanner.nextLine();
             editSuperhero(editUserChoice);
         }
@@ -238,7 +237,7 @@ public class Userinterface {
 
     // Bruger velighed: Kode der forhindre bruger at lave ERRORS.
 
-    public int readIntger() {
+    public int readInt() {
         while (!scanner.hasNextInt()) {
             String text = scanner.next();
             System.out.println(text + " " + "Invalid data, input a number please.");
@@ -272,10 +271,10 @@ public class Userinterface {
             }
 
 
-            int RI = readIntger();
+            int RI = readInt();
             System.out.println("Are you sure, you want delete this superhero? " + controller.database.getHeroDatabase().get(RI - 1).getName() + "?\n1. Delete " + controller.database.getHeroDatabase().get(RI - 1).getName() + "\n2. Dont delete");
 
-            int v2 = readIntger();
+            int v2 = readInt();
             switch (v2) {
                 case 1:
                     controller.database.deleteHero(RI);
@@ -285,12 +284,74 @@ public class Userinterface {
                 default:
                     System.out.println("Input is not valid");
                     break;
-
             }
         }
     }
 
+    public void sortByPrimaryAndSecondary() {
+        int menuchoice = 0;
+        int choice1 = 0;
+        int choice2 = 0;
+
+        System.out.println("Choose primary sorting");
+        System.out.println(""" 
+                1. Name
+                2. Is your superhero human
+                3. Superpower
+                4. Creation year
+                5. Strength
+                9. Close 
+                """);
+        menuchoice = readInt();
+        switch (menuchoice) {
+            case 1 -> choice1 = 1;
+            case 2 -> choice1 = 2;
+            case 3 -> choice1 = 3;
+            case 4 -> choice1 = 4;
+            case 5 -> choice1 = 5;
+            default -> System.out.println("Invalid input");
+        }
+        System.out.println("Choose secondary sorting");
+        System.out.println(""" 
+                1. Name
+                2. Is your superhero human
+                3. Superpower
+                4. Creation year
+                5. Strength
+                9. Close 
+                """);
+        menuchoice = readInt();
+        switch (menuchoice) {
+            case 1 -> choice2 = 1;
+            case 2 -> choice2 = 2;
+            case 3 -> choice2 = 3;
+            case 4 -> choice2 = 4;
+            case 5 -> choice2 = 5;
+            default -> System.out.println("Invalid input");
+        }
+        listHeader();
+     ArrayList<Superhero> sortingList = new ArrayList<>();
+        try {
+            sortingList = controller.sortByPrimarySecondary(choice1, choice2);
+        } catch (IllegalArgumentException e) {
+            System.out.println("Invalid input, cant choice same sorting category");
+        }
+        listHeader();
+        for (Superhero superhero : sortingList) {
+            System.out.println(formatPrint(superhero));
+        }
+    }
+
+    private void listHeader() {
+        System.out.printf("┃ %-20s │ %-15s │ %-20s │ %-8s │ %-13s ┃ %n", "name", "superheroName", "superheroPower", "Is human", "creationYear");
+    }
+
+    private String formatPrint(Superhero hero) {
+        return String.format("┃ %-20s │ %-15s │ %-20s │ %-8b │ %-13d ┃", hero.getName(), hero.getisHuman(), hero.getSuperPower(), hero.getCreationYear(), hero.getStrength());
+    }
 }
+
+
 
 
 

@@ -4,6 +4,7 @@ import Superhero.Superhero;
 import Comparator.*;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 
 public class Database {
     private ArrayList<Superhero> heroDatabase = new ArrayList<>();
@@ -87,6 +88,36 @@ public class Database {
         strengthList.addAll(list4);
         Collections.sort(strengthList, new StrengthComparator().reversed());
         return strengthList;
+    }
+
+    public ArrayList<Superhero> sortByPrimarySecondary(int a, int b) {
+        ArrayList<Superhero> sortingList = new ArrayList<>();
+        sortingList.addAll(heroDatabase);
+
+        Comparator<Superhero> comparator1 = null;
+        Comparator<Superhero> comparator2 = null;
+
+        switch (a) {
+            case 1 -> comparator1 = new NameComparator();
+            case 2 -> comparator1 = new IsHumanComparator();
+            case 3 -> comparator1 = new SuperPowerComparator();
+            case 4 -> comparator1 = new CreationYearComparator();
+            case 5 -> comparator1 = new StrengthComparator();
+        }
+
+        switch (b) {
+            case 1 -> comparator2 = new NameComparator();
+            case 2 -> comparator2 = new IsHumanComparator();
+            case 3 -> comparator2 = new SuperPowerComparator();
+            case 4 -> comparator2 = new CreationYearComparator();
+            case 5 -> comparator2 = new StrengthComparator();
+        }
+        if(!comparator1.getClass().equals(comparator2.getClass()))
+            Collections.sort(sortingList, comparator1.thenComparing(comparator2));
+        else{
+            throw new IllegalArgumentException();
+        }
+        return sortingList;
     }
 }
 

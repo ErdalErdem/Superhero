@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4c129410-604a-45c7-8ab5-2c998a9bafb8" name="Changes" comment="Restructured UI">
+    <list default="true" id="4c129410-604a-45c7-8ab5-2c998a9bafb8" name="Changes" comment="Boolean fungere nu">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Superhero/Superhero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Superhero/Superhero.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/UI/Userinterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UI/Userinterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/db/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/db/Database.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -359,7 +360,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668033461251</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="Boolean fungere nu">
+      <created>1668038518632</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1668038518632</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -397,6 +405,17 @@
     <MESSAGE value="readHero" />
     <MESSAGE value="Forbinde sortering til userinterface (UserStory 13)" />
     <MESSAGE value="Restructured UI" />
-    <option name="LAST_COMMIT_MESSAGE" value="Restructured UI" />
+    <MESSAGE value="Boolean fungere nu" />
+    <option name="LAST_COMMIT_MESSAGE" value="Boolean fungere nu" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.util.IllegalFormatConversionException" package="java.util" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
