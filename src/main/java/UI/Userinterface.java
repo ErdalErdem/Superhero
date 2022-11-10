@@ -79,7 +79,6 @@ public class Userinterface {
             dataChanged = true;
         } else if (userChoice == 6) {
             sortByPrimaryAndSecondary();
-            dataChanged = true;
         } else if (userChoice == 9) //Else if statement, for at kunne få superheroes i textfilen
             System.out.println("Closing Superhero..");
     }
@@ -94,7 +93,7 @@ public class Userinterface {
         boolean isHuman = true;
         int valg;
         do {
-            System.out.println("\n Type 1 for Yes\nType 2 for no");
+            System.out.println("\nType 1 for Yes\nType 2 for No");
             valg = scanner.nextInt();
             switch (valg) {
                 case 1 -> isHuman = true;
@@ -288,8 +287,8 @@ public class Userinterface {
         }
     }
 
-    public void sortByPrimaryAndSecondary() {
-        int menuchoice = 0;
+/*    public void sortByPrimaryAndSecondary() {
+        int menuchoice;
         int choice1 = 0;
         int choice2 = 0;
 
@@ -332,7 +331,61 @@ public class Userinterface {
         listHeader();
      ArrayList<Superhero> sortingList = new ArrayList<>();
         try {
-            sortingList = controller.sortByPrimarySecondary(choice1, choice2);
+            sortingList = controller.sortByPrimarySecondary(controller.readData() ,choice1, choice2);
+        } catch (IllegalArgumentException e) {
+            System.out.println("Invalid input, cant choice same sorting category");
+        }
+        listHeader();
+        for (Superhero superhero : sortingList) {
+            System.out.println(formatPrint(superhero));
+        }
+    }*/
+
+    public void sortByPrimaryAndSecondary() {
+        int menuchoice;
+        int choice1 = 0;
+        int choice2 = 0;
+
+        System.out.println("Choose primary sorting");
+        System.out.println(""" 
+                1. Name
+                2. Is your superhero human
+                3. Superpower
+                4. Creation year
+                5. Strength
+                9. Close 
+                """);
+        menuchoice = readInt();
+        switch (menuchoice) {
+            case 1 -> choice1 = 1;
+            case 2 -> choice1 = 2;
+            case 3 -> choice1 = 3;
+            case 4 -> choice1 = 4;
+            case 5 -> choice1 = 5;
+            default -> System.out.println("Invalid input");
+        }
+        System.out.println("Choose secondary sorting");
+        System.out.println(""" 
+                1. Name
+                2. Is your superhero human
+                3. Superpower
+                4. Creation year
+                5. Strength
+                9. Close 
+                """);
+        menuchoice = readInt();
+        switch (menuchoice) {
+            case 1 -> choice2 = 1;
+            case 2 -> choice2 = 2;
+            case 3 -> choice2 = 3;
+            case 4 -> choice2 = 4;
+            case 5 -> choice2 = 5;
+            default -> System.out.println("Invalid input");
+        }
+        //listHeader();
+        ArrayList<Superhero> sortingList = new ArrayList<>();
+        try {
+            sortingList = controller.sortByPrimarySecondary(controller.readData() ,choice1, choice2);
         } catch (IllegalArgumentException e) {
             System.out.println("Invalid input, cant choice same sorting category");
         }
@@ -343,11 +396,11 @@ public class Userinterface {
     }
 
     private void listHeader() {
-        System.out.printf("┃ %-20s │ %-15s │ %-20s │ %-8s │ %-13s ┃ %n", "name", "superheroName", "superheroPower", "Is human", "creationYear");
+        System.out.printf("┃ %-20s │ %-15s │ %-20s │ %-8s │ %-13s ┃ %n", "Name", "isHuman", "superPower", "creationYear", "strength");
     }
 
     private String formatPrint(Superhero hero) {
-        return String.format("┃ %-20s │ %-15s │ %-20s │ %-8b │ %-13d ┃", hero.getName(), hero.getisHuman(), hero.getSuperPower(), hero.getCreationYear(), hero.getStrength());
+        return String.format("┃ %-20s │ %-15s │ %-20s │ %-8b │ %-2f ┃", hero.getName(), hero.getisHuman(), hero.getSuperPower(), hero.getCreationYear(), hero.getStrength());
     }
 }
 

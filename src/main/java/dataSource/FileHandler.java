@@ -21,7 +21,6 @@ public class FileHandler {
     }
 
     public ArrayList<Superhero> readData () {
-        //Scanner sc = null;
         ArrayList<Superhero> readList = new ArrayList<Superhero>();
         try {
             Scanner sc = new Scanner(new File("superheroes.csv"));

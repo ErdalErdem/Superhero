@@ -12,15 +12,6 @@ public class Controller {
     public Database database = new Database();
     FileHandler fileHandler = new FileHandler();
 
-/*    public void MoveDataToDatabase() {            //Unødvendig, kan måske bruges senere
-        ArrayList<Superhero> fileData = fileHandler.readData();
-        for (int i = 0; i < fileHandler.getArrayFile().size(); i++){
-            Superhero superhero = fileData.get(i);
-            database.getHeroDatabase().add(superhero);
-            fileData.remove(superhero);
-        }
-    }*/
-
     public ArrayList<Superhero> readData() { //Reads data file by calling Filehandler class method
         return fileHandler.readData();
     }
@@ -49,7 +40,7 @@ public class Controller {
         return database.sortSuperStrength(list4);
     }
 
-    public ArrayList<Superhero> sortByPrimarySecondary(int valg1, int valg2) {
-        return database.sortByPrimarySecondary(valg1, valg2);
+    public ArrayList<Superhero> sortByPrimarySecondary(ArrayList<Superhero> unsortedList, int valg1, int valg2) {
+        return database.sortByPrimarySecondary(unsortedList, valg1, valg2);
     }
 }

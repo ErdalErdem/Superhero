@@ -42,10 +42,6 @@ public class Database {
         heroDatabase.add(new Superhero(name, isHuman, superPower, creationYear, strength));
     }
 
-    public ArrayList<Superhero> editSuperhero() {
-        return heroDatabase;
-    }
-
     public void editSuperhero(String name, boolean isHuman, String superPower, int creationYear, double strength) {
         Superhero editSuperhero = new Superhero(name, isHuman, superPower, creationYear, strength);
     }
@@ -90,9 +86,8 @@ public class Database {
         return strengthList;
     }
 
-    public ArrayList<Superhero> sortByPrimarySecondary(int a, int b) {
-        ArrayList<Superhero> sortingList = new ArrayList<>();
-        sortingList.addAll(heroDatabase);
+    public ArrayList<Superhero> sortByPrimarySecondary(ArrayList<Superhero> unsortedList, int a, int b) {
+        ArrayList<Superhero> sortingList = new ArrayList<>(unsortedList);
 
         Comparator<Superhero> comparator1 = null;
         Comparator<Superhero> comparator2 = null;
@@ -119,6 +114,7 @@ public class Database {
         }
         return sortingList;
     }
+
 }
 
 
