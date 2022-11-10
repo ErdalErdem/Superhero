@@ -11,6 +11,7 @@ public class Userinterface {
     Scanner scanner = new Scanner(System.in);
 
     Boolean dataChanged = false;
+    private Boolean isHumanOrNotString;
 
     public void startProgram() throws FileNotFoundException {
         int userChoice = -1;
@@ -91,7 +92,18 @@ public class Userinterface {
         String name = scanner.nextLine();
 
         System.out.println("Is your superhero human?");
-        Boolean isHumanOrNotString = scanner.hasNextLine();
+        boolean isHuman = true;
+        int valg;
+        do {
+            System.out.println("\n Type 1 for Yes\nType 2 for no");
+            valg = scanner.nextInt();
+            switch (valg) {
+                case 1 -> isHuman = true;
+                case 2 -> isHuman = false;
+                default -> System.out.println("Invalid input, try again");
+            }
+        } while (valg != 1 && valg != 2) ;
+
 
         scanner.nextLine();
 
@@ -105,11 +117,11 @@ public class Userinterface {
 
         System.out.println("Enter the superhero's strength:");
         double strength = readDouble();
-        controller.database.addSuperheroes(name, isHumanOrNotString, power, year, strength);
+        controller.database.addSuperheroes(name, isHuman, power, year, strength);
     }
 
     // fremvisning af superhetle liste
-/*    public void superheroList() {
+  /* public void superheroList() {
 
         if (controller.database.getHeroDatabase().size() == 0) {
             System.out.println("There are no superheroes registered...\n");
@@ -119,14 +131,14 @@ public class Userinterface {
                 System.out.println("Name:" + " " + superhero.getName() + " " + "Human:" + " " + superhero.getisHuman() + " " + "Superpower:" + " " + superhero.getSuperPower() + " " + "Year of creation" + " " + superhero.getCreationYear() + " " + "Strength" + " " + superhero.getStrength());
             }
         }
-    }*/
-
+    }
+*/
 
 
     // søgning af superhelte.
 
     public void searchInput() {
-        System.out.println("Enter Superhero.Superhero name: ");
+        System.out.println("Enter Superhero name: ");
         String findHero = scanner.nextLine();
         Superhero superhero = controller.database.findSuperhero(findHero);
         if (superhero != null) {
@@ -171,12 +183,12 @@ public class Userinterface {
     public void editTool() {
 
         if (controller.database.getHeroDatabase().size() == 0) {
-            System.out.println("There's no Superhero.Superhero registered");
+            System.out.println("There's no Superhero registered");
         } else {
-            System.out.println("List of Superhero.Superhero's registered");
+            System.out.println("List of Superhero's registered");
 
             for (int i = 0; i < controller.database.getHeroDatabase().size(); i++) {
-                System.out.println(i + 1 + " Superhero.Superhero: \n" + controller.database.getHeroDatabase().get(i));
+                System.out.println(i + 1 + "Superhero: \n" + controller.database.getHeroDatabase().get(i));
             }
 
 
